@@ -3,15 +3,15 @@ import faker, { fake } from 'faker'
 export class User {
   name: string
   location: {
-    longitude: number,
-    latitude: number
+    lng: number,
+    lat: number
   }
 
   constructor(){
     this.name = faker.name.firstName()
     this.location = {
-      longitude: parseFloat(faker.address.longitude()),
-      latitude: parseFloat(faker.address.latitude())
+      lng: parseFloat(faker.address.longitude()),
+      lat: parseFloat(faker.address.latitude())
     }
   }
 }
